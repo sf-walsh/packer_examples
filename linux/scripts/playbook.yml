@@ -1,0 +1,11 @@
+---
+# playbook.yml
+- name: 'Install Base Packages'
+  hosts: localhost
+  become: true
+  tasks:
+    - name: install git 
+      yum:
+        name: 'git'
+        state: present
+        update_cache: true
